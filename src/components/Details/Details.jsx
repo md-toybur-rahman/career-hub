@@ -13,15 +13,19 @@ const Details = () => {
     const { description, responsibility, experiences, salary, title, phone, email, address, education, picture, company, id } = feature;
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     const applyHandler = (setId) => {
-        let y = [];
+        let cart = [];
         const getItem = getJobCart();
         for (const id in getItem) {
-            y.push(id);
+            cart.push(id);
         }
-        const exists = y.find(a => a === setId);
-        if (exists) {
-            toast("Already Added");
+        const exists = cart.find(id => id === setId);
+        if (!exists) {
+            toast("Apply Done ✅ ");
         }
+        else{
+            toast("Already Added ❗❗❗")
+        }
+
         addToDb(setId);
     }
     return (
