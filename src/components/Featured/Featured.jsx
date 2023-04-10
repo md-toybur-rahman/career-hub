@@ -24,7 +24,7 @@ const Featured = ({ feature }) => {
                 <p className='flex items-center gap-3 text-xl text-[#757575]'><MapPinIcon className='h-7 w-7 text-gray-400'></MapPinIcon> {location}</p>
                 <p className='flex items-center gap-3 text-xl text-[#757575] mt-5 md:mt-0'><CurrencyDollarIcon className='h-7 w-7 text-gray-400'></CurrencyDollarIcon> Salary : {salary}</p>
             </div>
-            <Link to='/details'><button>View Details</button></Link>
+            <Link to='/details'><button feature={future}>View Details</button></Link>
         </div>
     );
 };
