@@ -13,7 +13,7 @@ function App() {
       <header className='max-w-[1440px] mx-auto'>
         <Header></Header>
       </header>
-      <main className='max-w-[1440px] mx-auto min-h-[100vh]'>
+      <main className='min-h-[100vh]'>
         <Outlet></Outlet>
       </main>
       <footer>

@@ -2,15 +2,10 @@ import React, { useEffect } from 'react';
 import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom';
 const Featured = ({ feature }) => {
-    useEffect(() => {
-        // 👇️ scroll to top on page load
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-    }, []);
     const { title, picture, company, jobType, shift, location, salary, id } = feature;
     const detailHandler = () => {
         localStorage.setItem('details', id);
     }
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     return (
         <div className='p-10 rounded-lg border border-purple-300 md:h-[392px]'>
             <img className='mb-7' src={picture} alt="" />
@@ -32,6 +27,7 @@ const Featured = ({ feature }) => {
                 <p className='flex items-center gap-3 text-xl text-[#757575]'><MapPinIcon className='h-7 w-7 text-gray-400'></MapPinIcon> {location}</p>
                 <p className='flex items-center gap-3 text-xl text-[#757575] mt-5 md:mt-0'><CurrencyDollarIcon className='h-7 w-7 text-gray-400'></CurrencyDollarIcon> Salary : {salary}</p>
             </div>
+
             <Link to='/details' ><button onClick={() => detailHandler()}>View Details</button></Link>
         </div>
     );
