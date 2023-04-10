@@ -9,6 +9,7 @@ import Blog from './components/Blog/Blog'
 import Home from './components/Home/Home'
 import Details from './components/Details/Details'
 import AppliedJobs from './components/AppliedJobs/AppliedJobs'
+import ErrorPage from './components/ErrorPage/ErrorPage'
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/applied',
-        element: <AppliedJobs></AppliedJobs>
+        element: <AppliedJobs></AppliedJobs>,
+        loader: async() => fetch('featured.json')
       },
       {
         path: '/blog',
@@ -36,7 +38,8 @@ const router = createBrowserRouter([
         element: <Details></Details>,
         loader: async() => fetch('featured.json'),
       }
-    ]
+    ],
+    errorElement: <ErrorPage></ErrorPage>
   }
 ])
 
