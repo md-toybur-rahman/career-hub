@@ -7,6 +7,7 @@ import Statistics from './components/Statistics/Statistics'
 import Applied from './components/Applied/Applied'
 import Blog from './components/Blog/Blog'
 import Home from './components/Home/Home'
+import Details from './components/Details/Details'
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
         path: '/blog',
         element: <Blog></Blog>
       },
+      {
+        path: '/details',
+        element: <Details></Details>
+      }
     ]
   }
 ])

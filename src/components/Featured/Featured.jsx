@@ -1,9 +1,30 @@
 import React from 'react';
-
-const Featured = () => {
+import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/outline'
+import { Link } from 'react-router-dom';
+const Featured = ({ feature }) => {
+    const { title, picture, company, jobType, shift, location, salary } = feature;
     return (
-        <div>
-            
+        <div className='p-10 rounded-lg border border-purple-300 md:h-[392px]'>
+            <img className='mb-7' src={picture} alt="" />
+            <h1 className='text-2xl md-1'>{title}</h1>
+            <p className='text-xl text-[#757575] mb-4'>{company}</p>
+            <div className='flex gap-5 items-center'>
+                <div class="h-12 w-24 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 p-[2px]">
+                    <div class="flex h-full w-full items-center justify-center bg-white rounded-md back">
+                        <h2 className='text-transparent font-bold bg-clip-text bg-gradient-to-b from-indigo-500 to-purple-500'>{jobType}</h2>
+                    </div>
+                </div>
+                <div class="h-12 w-24 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 p-[2px]">
+                    <div class="flex h-full w-full items-center justify-center bg-white rounded-md back">
+                        <h2 className='text-transparent font-bold bg-clip-text bg-gradient-to-b from-indigo-500 to-purple-500'>{shift}</h2>
+                    </div>
+                </div>
+            </div>
+            <div className='md:flex gap-5 mt-4 mb-6 items-center'>
+                <p className='flex items-center gap-3 text-xl text-[#757575]'><MapPinIcon className='h-7 w-7 text-gray-400'></MapPinIcon> {location}</p>
+                <p className='flex items-center gap-3 text-xl text-[#757575] mt-5 md:mt-0'><CurrencyDollarIcon className='h-7 w-7 text-gray-400'></CurrencyDollarIcon> Salary : {salary}</p>
+            </div>
+            <Link to='/details'><button>View Details</button></Link>
         </div>
     );
 };

@@ -10,9 +10,15 @@ function App() {
 
   return (
     <div className="App">
-      <Header></Header>
-      <Outlet></Outlet>
-      <Footer></Footer>
+      <header className='max-w-[1440px] px-[50px] mx-auto'>
+        <Header></Header>
+      </header>
+      <main className='max-w-[1440px] px-[50px] mx-auto h-[500px]]'>
+        <Outlet></Outlet>
+      </main>
+      <footer>
+        <Footer></Footer>
+      </footer>
     </div>
   )
 }
