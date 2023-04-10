@@ -10,10 +10,10 @@ function App() {
 
   return (
     <div className="App">
-      <header className='max-w-[1440px] px-[50px] mx-auto'>
+      <header className='max-w-[1440px] mx-auto'>
         <Header></Header>
       </header>
-      <main className='max-w-[1440px] px-[50px] mx-auto h-[500px]]'>
+      <main className='max-w-[1440px] mx-auto min-h-[100vh]'>
         <Outlet></Outlet>
       </main>
       <footer>

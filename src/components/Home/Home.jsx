@@ -10,7 +10,7 @@ const Home = () => {
 
     // }, []) 
     return (
-        <body>
+        <body className='px-[50px]'>
             {/* ============= Banner Section =========== */}
             <section className='mt-5 mb-10 md:grid md:grid-cols-2 items-center gap-5 text-center flex flex-col-reverse'>
                 <div>
