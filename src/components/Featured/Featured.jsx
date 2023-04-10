@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom';
+
 const Featured = ({ feature }) => {
     const { title, picture, company, jobType, shift, location, salary, id } = feature;
     const detailHandler = () => {

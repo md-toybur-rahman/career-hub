@@ -8,10 +8,10 @@ const Home = () => {
     const [x, setX] = useState(4);
     const featured = useLoaderData();
     const half = featured.slice(0, x);
-    const showAllHandler = () =>{
+    const showAllHandler = () => {
         setX(featured.length)
     }
-    const minimizeHandler = () =>{
+    const minimizeHandler = () => {
         setX(4)
     }
     return (
@@ -52,7 +52,7 @@ const Home = () => {
                     {
                         x === 4 ? <button onClick={() => showAllHandler()} className='mt-10'>See All Jobs</button> : <button onClick={() => minimizeHandler()} className='mt-10'>Minimize</button>
                     }
-                    
+
                 </div>
             </section>
             {/* ============= End Featured Section =========== */}

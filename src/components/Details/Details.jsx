@@ -1,18 +1,28 @@
 import React from 'react';
 import { MapPinIcon, CurrencyDollarIcon, CalendarDaysIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 import { Link, useLoaderData } from 'react-router-dom';
-import { addToDb } from '../../../utilities/fakedb';
+import { addToDb, getJobCart } from '../../../utilities/fakedb';
 // import featured from '../../../public/featured.json'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Details = () => {
-    console.log(window.scrollY)
     const featured = useLoaderData();
     const getId = localStorage.getItem('details');
     const feature = featured.find(item => item.id === getId);
-    const {description, responsibility, experiences, salary, title, phone, email, address, education, picture, company, id }= feature;
+    const { description, responsibility, experiences, salary, title, phone, email, address, education, picture, company, id } = feature;
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     const applyHandler = (setId) => {
-        addToDb(setId)
+        let y = [];
+        const getItem = getJobCart();
+        for (const id in getItem) {
+            y.push(id);
+        }
+        const exists = y.find(a => a === setId);
+        if (exists) {
+            toast("Already Added");
+        }
+        addToDb(setId);
     }
     return (
         <div>
@@ -25,7 +35,7 @@ const Details = () => {
                 <img src={picture} alt="" />
                 <h2 className='mt-3 font-medium text-2xl text-transparent bg-clip-text bg-gradient-to-b from-indigo-500 to-purple-500'>{company}</h2>
             </div>
-            <hr className='mt-5 border-indigo-200 max-w-[1440px] mx-auto' />
+            <hr className='mt-5 border-indigo-200 mx-[50px]' />
             <div className='px-[50px] grid md:grid-cols-3 gap-10 mt-10 max-w-[1440px] mx-auto'>
                 <div className='md:col-span-2'>
                     <p className='text-base mb-6 leading-7'><span className='font-bold'>Job Description: </span> {description}</p>
@@ -48,6 +58,7 @@ const Details = () => {
                     </div>
                     <button onClick={() => applyHandler(id)} className='mt-5 w-full'>Apply Now</button>
                     <Link to='/'><button className='mt-5 w-full'>Back to Home Page</button></Link>
+                    <ToastContainer></ToastContainer>
                 </div>
             </div>
         </div>
