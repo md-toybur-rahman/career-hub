@@ -5,14 +5,11 @@ import Category from '../Category/Category';
 import Featured from '../Featured/Featured';
 
 const Home = () => {
-    // const [category, setCategory] = useState([]);
-    // useEffect(() => {
 
-    // }, []) 
     return (
-        <body className='px-[50px]'>
+        <div className='px-[50px]'>
             {/* ============= Banner Section =========== */}
-            <section className='mt-5 mb-10 md:grid md:grid-cols-2 items-center gap-5 text-center flex flex-col-reverse'>
+            <section className='mt-5 mb-10 md:grid md:grid-cols-2 items-center gap-5 text-center md:text-left flex flex-col-reverse'>
                 <div>
                     <h1 className='text-5xl md:text-7xl font-bold leading-[50px] md:leading-[85px]'>One Step <br /> Closer To Your <br /> <span className='text-transparent bg-clip-text bg-gradient-to-b from-indigo-500 to-purple-500'>Dream Job</span></h1>
                     <p className='mt-5 mb-7 text-lg text-[#757575]'>Explore thousands of job opportunities with all the <br /> information you need. Its your future. Come find it. Manage all <br /> your job application from start to finish.</p>
@@ -49,7 +46,7 @@ const Home = () => {
             </section>
             {/* ============= End Featured Section =========== */}
 
-        </body>
+        </div>
     );
 };
 

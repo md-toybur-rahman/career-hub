@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
             <div className='md:flex justify-between mt-20'>
                 <p className='text-base leading-7 text-[#757575]'>@2023 CareerHub. All Rights Reserved</p>
-                <p  className='text-base leading-7 text-[#757575] mt-8 md:mt-0'>Powered by CareerHub</p>
+                <p className='text-base leading-7 text-[#757575] mt-8 md:mt-0'>Powered by CareerHub</p>
             </div>
         </div>
     );
