@@ -10,9 +10,7 @@ const Featured = ({ feature }) => {
     const detailHandler = () => {
         localStorage.setItem('details', id);
     }
-    const scroll = () => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     return (
         <div className='p-10 rounded-lg border border-purple-300 md:h-[392px]'>
             <img className='mb-7' src={picture} alt="" />
@@ -34,7 +32,7 @@ const Featured = ({ feature }) => {
                 <p className='flex items-center gap-3 text-xl text-[#757575]'><MapPinIcon className='h-7 w-7 text-gray-400'></MapPinIcon> {location}</p>
                 <p className='flex items-center gap-3 text-xl text-[#757575] mt-5 md:mt-0'><CurrencyDollarIcon className='h-7 w-7 text-gray-400'></CurrencyDollarIcon> Salary : {salary}</p>
             </div>
-            <Link to='/details' onClick={()=> scroll()}><button onClick={() => detailHandler()}>View Details</button></Link>
+            <Link to='/details' ><button onClick={() => detailHandler()}>View Details</button></Link>
         </div>
     );
 };

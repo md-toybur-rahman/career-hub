@@ -5,7 +5,6 @@ import Category from '../Category/Category';
 import Featured from '../Featured/Featured';
 
 const Home = () => {
-
     return (
         <div className='px-[50px]'>
             {/* ============= Banner Section =========== */}

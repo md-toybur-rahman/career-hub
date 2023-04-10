@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPinIcon, CurrencyDollarIcon, CalendarDaysIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 import { Link, useLoaderData } from 'react-router-dom';
+import { addToDb } from '../../../utilities/fakedb';
 // import featured from '../../../public/featured.json'
 
 const Details = () => {
@@ -8,9 +9,13 @@ const Details = () => {
     const featured = useLoaderData();
     const getId = localStorage.getItem('details');
     const feature = featured.find(item => item.id === getId);
-    const {description, responsibility, experiences, salary, title, phone, email, address, education, picture, company }= feature;
+    const {description, responsibility, experiences, salary, title, phone, email, address, education, picture, company, id }= feature;
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    const applyHandler = (setId) => {
+        addToDb(setId)
+    }
     return (
-        <div className=''>
+        <div>
             <div className='bg-gradient-to-r from-indigo-50 to-purple-50 relative -top-[100px] -z-10 h-[400px]'>
                 <img className='absolute bottom-0' src="../../../public/images/Vector.png" alt="" />
                 <img className='absolute right-0' src="../../../public/images/Vector2.png" alt="" />
@@ -41,7 +46,7 @@ const Details = () => {
                         <p className='flex items-center gap-3 my-3'><EnvelopeIcon className='h-5 w-5'></EnvelopeIcon> <span className='font-bold'>Email: </span>{email}</p>
                         <p className='flex  gap-3'><MapPinIcon className='h-5 w-5'></MapPinIcon> <span className='font-bold'>Address: </span>{address}</p>
                     </div>
-                    <button className='mt-5 w-full'>Apply Now</button>
+                    <button onClick={() => applyHandler(id)} className='mt-5 w-full'>Apply Now</button>
                     <Link to='/'><button className='mt-5 w-full'>Back to Home Page</button></Link>
                 </div>
             </div>
