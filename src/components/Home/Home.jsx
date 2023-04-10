@@ -20,7 +20,7 @@ const Home = () => {
             <section className='mt-28'>
                 <h1 className='font-bold text-5xl text-center mb-5'>Job Category List</h1>
                 <p className='text-center text-lg text-[#757575]'>Explore thousands of job opportunities with all the information you need. Its your future</p>
-                <div>
+                <div className='flex gap-5 justify-center flex-col items-center md:flex-row mt-10'>
                     {
                         categories.map(item => <Category key={item.id} category={item}></Category>)
                     }
