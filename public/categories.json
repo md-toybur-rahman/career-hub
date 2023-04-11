@@ -3,27 +3,27 @@
         "id": "623853b2614ad5aba311fdd1",
         "index": 0,
         "job": "300",
-        "picture": "/images/accounts.png",
+        "picture": "https://i.ibb.co/BgmkW3v/accounts.png",
         "name": "Account & Finance"
       },
       {
         "id": "623853b2578e9e6ad1ae0dd5",
         "index": 1,
-        "picture": "/images/business.png",
+        "picture": "https://i.ibb.co/fFjKcc2/business.png",
         "name": "Creative Design",
         "job": "100+"
       },
       {
         "id": "623853b21fb149d2ee7b76c7",
         "index": 2,
-        "picture": "/images/social-media.png",
+        "picture": "https://i.ibb.co/7Ws3q4B/social-media.png",
         "name": "Marketing & Sales",
         "job": "150"
       },
       {
         "id": "623853b2e91c8de578c9245e",
         "index": 3,
-        "picture": "/images/chip .png",
+        "picture": "https://i.ibb.co/m4zLWXv/chip.png",
         "name": "Engineering Job",
         "job": "224"
       }

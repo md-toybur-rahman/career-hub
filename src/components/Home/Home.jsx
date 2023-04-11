@@ -23,7 +23,7 @@ const Home = () => {
                     <p className='mt-5 mb-7 text-lg text-[#757575]'>Explore thousands of job opportunities with all the <br className='hidden md:block' /> information you need. Its your future. Come find it. Manage all <br className='hidden md:block' /> your job application from start to finish.</p>
                     <button>Get Started</button>
                 </div>
-                <img className='hidden md:block' src="/images/profile.png" alt="" />
+                <img className='hidden md:block' src="https://i.ibb.co/W6ZMrCr/profile.png" alt="" />
             </section>
             {/* ============= End Banner Section =========== */}
 
