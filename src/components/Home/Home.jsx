@@ -5,14 +5,14 @@ import Featured from '../Featured/Featured';
 import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
-    const [x, setX] = useState(4);
+    const [numberOfData, setNumberOfData] = useState(4);
     const featured = useLoaderData();
-    const half = featured.slice(0, x);
+    const half = featured.slice(0, numberOfData);
     const showAllHandler = () => {
-        setX(featured.length)
+        setNumberOfData(featured.length)
     }
     const minimizeHandler = () => {
-        setX(4)
+        setNumberOfData(4)
     }
     return (
         <div className='px-[50px] max-w-[1440px] mx-auto'>
@@ -50,7 +50,7 @@ const Home = () => {
                 </div>
                 <div className='text-center'>
                     {
-                        x === 4 ? <button onClick={() => showAllHandler()} className='mt-10'>See All Jobs</button> : <button onClick={() => minimizeHandler()} className='mt-10'>Minimize</button>
+                        numberOfData === 4 ? <button onClick={() => showAllHandler()} className='mt-10'>See All Jobs</button> : <button onClick={() => minimizeHandler()} className='mt-10'>Minimize</button>
                     }
 
                 </div>
