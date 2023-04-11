@@ -1,7 +1,19 @@
-import React from 'react';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+import React, { useEffect, useState } from 'react';
+import { ResponsiveContainer, Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Legend, Tooltip } from 'recharts';
 
 const Statistics = () => {
+    const [size, setSize] = useState(false);
+    const checkSize = () => {
+        setSize(window.innerWidth < 768);
+    };
+
+    useEffect(() => {
+        checkSize();
+        window.addEventListener('resize', checkSize);
+
+        return () => window.removeEventListener('resize', checkSize)
+    }, [])
+
     const marks = [
         {
             subject: 'Assignment-01',
@@ -44,19 +56,21 @@ const Statistics = () => {
             fullMark: 60,
         },
     ];
+    
 
     return (
-        <div className='flex justify-center mt-20'>
-            <RadarChart cx={500} cy={250} outerRadius={200} width={1000} height={500} stroke="purple" data={marks}>
-                <PolarGrid></PolarGrid>
-                <PolarAngleAxis dataKey='subject' stroke='purple'></PolarAngleAxis>
-                <PolarRadiusAxis angle={20} domain={[0, 60]} />
-                <Radar name="Toybur Rahman" dataKey="result" stroke="indigo" fill="purple" fillOpacity={0.2} />
-                <Legend></Legend>
-                <Tooltip />
-            </RadarChart>
+        <div className='flex justify-center mt-10 '>
+            <ResponsiveContainer  width={size ? 450 : 700} height={500}>
+                <RadarChart cx="50%" cy={250} outerRadius={`${size ? 130 : 200}`} stroke="purple" data={marks}>
+                    <PolarGrid></PolarGrid>
+                    <PolarAngleAxis dataKey={`${size ? '' : 'subject'}`} stroke='purple'></PolarAngleAxis>
+                    <PolarRadiusAxis angle={20} domain={[0, 60]} />
+                    <Radar name="Toybur Rahman" dataKey="result" stroke="indigo" fill="purple" fillOpacity={0.2} />
+                    <Legend></Legend>
+                    <Tooltip />
+                </RadarChart>
+            </ResponsiveContainer>
         </div>
     );
 };
-
 export default Statistics;
