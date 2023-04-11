@@ -9,9 +9,9 @@ const Footer = () => {
                     <p className='text-base leading-7 text-[#757575]'>There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
 
                     <div className='flex gap-5 mt-8 justify-center md:justify-start'>
-                        <img className='bg-white px-3 py-3 rounded-full w-10 h-10' src="../../../public/images/facebook.png" alt="" />
-                        <img className='bg-white px-3 py-3 rounded-full w-10 h-10' src="../../../public/images/twiter.png" alt="" />
-                        <img className='bg-white px-3 py-3 rounded-full w-10 h-10' src="../../../public/images/insta.png" alt="" />
+                        <img className='bg-white px-3 py-3 rounded-full w-10 h-10' src="../../../images/facebook.png" alt="" />
+                        <img className='bg-white px-3 py-3 rounded-full w-10 h-10' src="../../../images/twiter.png" alt="" />
+                        <img className='bg-white px-3 py-3 rounded-full w-10 h-10' src="../../../images/insta.png" alt="" />
                     </div>
                 </div>
                 <div className='text-base leading-7 text-[#757575]'>

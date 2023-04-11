@@ -2,7 +2,7 @@
     {
         "id": "623853b2614ad5aba31",
         "index": 0,
-        "picture": "/public/images/google.png",
+        "picture": "/images/google.png",
         "title": "Technical Database Engineer",
         "company": "Google LLC",
         "jobType": "Remote",
@@ -20,7 +20,7 @@
       {
         "id": "623853b2578e9e6ad1",
         "index": 1,
-        "picture": "/public/images/netflix.png",
+        "picture": "/images/netflix.png",
         "title": "Senior Product Designer",
         "company": "Netflix",
         "jobType": "Remote",
@@ -38,7 +38,7 @@
       {
         "id": "623853b21fb149d2ee5",
         "index": 2,
-        "picture": "/public/images/tesla.png",
+        "picture": "/images/tesla.png",
         "title": "Software Engineer",
         "company": "Tesla",
         "jobType": "Onsite",
@@ -56,7 +56,7 @@
       {
         "id": "623853b2e91c8de578",
         "index": 3,
-        "picture": "/public/images/google.png",
+        "picture": "/images/google.png",
         "title": "Web Developer",
         "company": "Google LLC",
         "jobType": "Onsite",
@@ -74,7 +74,7 @@
       {
         "id": "623853b2ecc91c8de57822",
         "index": 4,
-        "picture": "/public/images/airbnb.png",
+        "picture": "/images/airbnb.png",
         "title": "Motion Graphics Designer",
         "company": "Airbnb",
         "jobType": "Onsite",
@@ -92,7 +92,7 @@
       {
         "id": "623853b2e91caa8de57855",
         "index": 5,
-        "picture": "/public/images/tesla.png",
+        "picture": "/images/tesla.png",
         "title": "Creative Designer",
         "company": "Tesla",
         "jobType": "Remote",
