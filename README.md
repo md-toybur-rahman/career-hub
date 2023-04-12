@@ -33,7 +33,7 @@
 
 # Live Site Link
 
-**[https://github.com/matiassingers/awesome-readme](https://github.com/matiassingers/awesome-readme)**
+**[https://job-hunter-50e385.netlify.app/](https://job-hunter-50e385.netlify.app/)**
 
 
 
