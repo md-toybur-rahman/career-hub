@@ -56,7 +56,7 @@ const AppliedJobs = () => {
 
                 <div className={`flex flex-col items-center justify-center ${localStorage.getItem('job-cart') ? 'hidden' : ''}`}>
                     <div className='text-center'>
-                        <h1 className='h-24 text-6xl text-transparent bg-clip-text bg-gradient-to-b from-indigo-500 to-purple-500'>Please Apply for a Job</h1>
+                        <h1 className='h-fit md:h-24 mb-7 text-6xl text-transparent bg-clip-text bg-gradient-to-b from-indigo-500 to-purple-500'>Please Apply for a Job</h1>
                         <Link to='/'><button>Back to Home Page</button></Link>
                     </div>
                 </div>

@@ -2,7 +2,6 @@ import React from 'react';
 import { MapPinIcon, CurrencyDollarIcon, CalendarDaysIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 import { Link, useLoaderData } from 'react-router-dom';
 import { addToDb, getJobCart } from '../../../utilities/fakedb';
-// import featured from '../../../public/featured.json'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Banner from '../Banner/Banner';
@@ -13,6 +12,7 @@ const Details = () => {
     const feature = featured.find(item => item.id === getId);
     const { description, responsibility, experiences, salary, title, phone, email, address, education, picture, company, id } = feature;
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    
     const applyHandler = (setId) => {
         let cart = [];
         const getItem = getJobCart();
