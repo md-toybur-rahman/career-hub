@@ -5,6 +5,7 @@ import { addToDb, getJobCart } from '../../../utilities/fakedb';
 // import featured from '../../../public/featured.json'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Banner from '../Banner/Banner';
 
 const Details = () => {
     const featured = useLoaderData();
@@ -30,11 +31,7 @@ const Details = () => {
     }
     return (
         <div>
-            <div className='bg-gradient-to-r from-indigo-50 to-purple-50 relative -top-[100px] -z-10 h-[400px]'>
-                <img className='absolute bottom-0' src="https://i.ibb.co/bRZsrwn/Vector.png" alt="" />
-                <img className='absolute right-0' src="https://i.ibb.co/4ZBwNfm/Vector2.png" alt="" />
-                <h1 className='text-center text-5xl font-semibold py-[200px]'>Job Details</h1>
-            </div>
+            <Banner name="Job Details"></Banner>
             <div className='flex items-center justify-center flex-col px-[50px]'>
                 <img src={picture} alt="" />
                 <h2 className='mt-3 font-medium text-2xl text-transparent bg-clip-text bg-gradient-to-b from-indigo-500 to-purple-500'>{company}</h2>

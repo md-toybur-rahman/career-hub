@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Banner from '../Banner/Banner';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
+    const scrollHandler = () => {
+        window.scrollTo({ top: 0, left: 0, behavior:'smooth'});
+    }
     return (
         <div>
-            <div className='bg-gradient-to-r from-indigo-50 to-purple-50 relative -top-[100px] -z-10 h-[400px]'>
-                <img className='absolute bottom-0' src="https://i.ibb.co/bRZsrwn/Vector.png" alt="" />
-                <img className='absolute right-0' src="https://i.ibb.co/4ZBwNfm/Vector2.png" alt="" />
-                <h1 className='text-center text-5xl font-semibold py-[200px]'>Blog</h1>
-            </div>
+            <Banner name="Blog"></Banner>
             <div className='px-[50px] grid gap-6'>
                 <div className='p-[30px] rounded-lg border border-purple-300'>
                     <h1 className='text-xl font-semibold mb-3'>Question-01: When should you use Context Api?</h1>
@@ -15,14 +16,20 @@ const Blog = () => {
                 </div>
                 <div className='p-[30px] rounded-lg border border-purple-300'>
                     <h1 className='text-xl font-semibold mb-3'>Question-02: What is Custom Hook?</h1>
-                    <p className='text-lg'><span className='font-semibold'>Answer: </span> Give your Answers</p>
+                    <p className='text-lg'><span className='font-semibold'>Answer: </span> The hooks that we can create and use outside React's hooks are called Custom Hooks. It is a very powerful hook. Code repetition occurs when the same JavaScrip code is used in different components in React. Then a custom hook is used as a solution. The word 'use' must be used at the beginning of the hook name during creation</p>
                 </div>
                 <div className='p-[30px] rounded-lg border border-purple-300'>
                     <h1 className='text-xl font-semibold mb-3'>Question-03: What is useRef and what the purpose of useRef Hook?</h1>
-                    <p className='text-lg'><span className='font-semibold'>Answer: </span> Give your Answers</p>
+                    <p className='text-lg'><span className='font-semibold'>Answer: </span> In JavaScript we use 'document.getElementById', 'document.querySelector' etc. to access the elements of DOM to manipulate the DOM. But doing this in React is not a good practice. React uses a hook called useRef to access elements of the DOM.</p>
+                </div>
+                <div className='p-[30px] rounded-lg border border-purple-300'>
+                    <h1 className='text-xl font-semibold mb-3'>Question-04: What is useMemo and what the purpose of useMemo Hook?</h1>
+                    <p className='text-lg'><span className='font-semibold'>Answer: </span> When State is declared in a parent component in React, the entire component is re-rendered. As a result, all child components of that parent component are also re-rendered. A hook called useMemo is used in child components to avoid unnecessary re-renders.</p>
                 </div>
             </div>
-
+            <div className='flex justify-center mt-10'>
+                <Link to='/'><button onClick={() => scrollHandler()}>Back to Home Page</button></Link>
+            </div>
         </div>
     );
 };
